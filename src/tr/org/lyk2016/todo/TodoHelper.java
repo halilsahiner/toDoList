@@ -22,18 +22,19 @@ public class TodoHelper {
 	 * This method sets a Todo object's done field which is placed in the
 	 * specified index of todos list
 	 * 
-	 * @param index list index of the Todo object to be modified
-	 * @param isDone a boolean value which indicates whether it's done or not
+	 * @param index
+	 *            list index of the Todo object to be modified
+	 * @param isDone
+	 *            a boolean value which indicates whether it's done or not
 	 */
 	public static void mark(int index, boolean isDone) {
-		// TODO you need to implement this method
-		Todo t =todos.get(index);
+		
+		Todo t = todos.get(index);
 		t.setDone(isDone);
 	}
 
 	public static Iterator<Todo> getIterator() {
-//		// TODO remove following exception and return an appropriate value
-//		throw new UnsupportedOperationException("You need to implement (fill) this method's body.");
+
 		return todos.iterator();
 	}
 
