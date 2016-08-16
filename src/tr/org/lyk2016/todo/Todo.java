@@ -25,9 +25,11 @@ public class Todo {
 		super();
 		this.description = description;
 	}
-	
-	public String getCheckbox(){
-		return done ? "☑" : "☐";
+
+	public String getCheckbox() {
+		return done ? "☑" : "☐"; // if(done){return "☑" ;}
+									// else{return "☐";}
+
 	}
 
 }

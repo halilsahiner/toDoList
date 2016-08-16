@@ -23,8 +23,11 @@ public class Application {
 
 		int action = Integer.parseInt(inputParams[0]);
 		String param = null;
-		if (inputParams.length > 1) {
+		if (inputParams.length > 1) { // 0 verdiğimizde exception almadan
 			param = inputParams[1];
+			// çıkabilmek için ikinci kısmı direk
+			// null okusun diye böyle bir koşul
+			// verdik.
 		}
 
 		System.out.println("[debug] action: " + action);
@@ -44,8 +47,12 @@ public class Application {
 			TodoHelper.mark(index - 1, true);
 			break;
 		case 3:
-			index= Integer.parseInt(param);
-			TodoHelper.remove(index-1);
+			index = Integer.parseInt(param);
+			TodoHelper.remove(index - 1);
+			break;
+		case 4:
+			index = Integer.parseInt(param);
+			TodoHelper.mark(index - 1, false);
 			break;
 
 		default:
